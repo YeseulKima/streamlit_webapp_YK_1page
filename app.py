@@ -3,20 +3,10 @@ import numpy as np
 import pandas as pd
 import joblib
 class MultiPage: 
-    """Framework for combining multiple streamlit applications."""
-
     def __init__(self) -> None:
-        """Constructor class to generate a list which will store all our applications as an instance variable."""
         self.pages = []
     
     def add_page(self, title, func) -> None: 
-        """Class Method to Add pages to the project
-        Args:
-            title ([str]): The title of page which we are adding to the list of apps 
-            
-            func: Python function to render this page in Streamlit
-        """
-
         self.pages.append(
             {
                 "title": title, 
@@ -31,8 +21,6 @@ class MultiPage:
             self.pages, 
             format_func=lambda page: page['title']
         )
-
-        # run the app function 
         page['function']()
         
 def overall_app():
@@ -204,7 +192,8 @@ st.set_page_config(layout="wide")
 # Overall structure.
 col1,  col2, col3 = st.columns([2,0.8,4])
 with col1:
-    st.image('sample_logo_v1res600.png', width=400) #catholicNsnuh_logo_v1 #, col3
+    st.write('Hello')
+    #st.image('sample_logo_v1res600.', width=400) #catholicNsnuh_logo_v1 #, col3
 with col3:
     st.title('Meningioma perfect prediction')
     disclaimer = '<p style="font-family:sans-serif; color:Black; font-size: 18px;">* Disclaimer! "This application is for an academic use only!"<br> \
