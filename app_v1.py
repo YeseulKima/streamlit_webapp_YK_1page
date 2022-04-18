@@ -138,8 +138,8 @@ st.set_page_config(layout="wide", page_title='Meningioma Prediction', page_icon=
 # Overall structure.
 col1,  col2, col3 = st.columns([2,0.8,4])
 with col1:
-    st.write('Hello')
-    #st.image('sample_logo_v1res600.png', width=200) #catholicNsnuh_logo_v1 #, col3
+    #st.write('Hello')
+    st.image('sample_logo_v1res600.png', width=200) #catholicNsnuh_logo_v1 #, col3
 with col3:
     st.title('Meningioma perfect prediction')
     disclaimer = '<p style="font-family:sans-serif; color:Black; font-size: 18px;">* Disclaimer! "This application is for an academic use only!"<br> \
