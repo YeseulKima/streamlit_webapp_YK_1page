@@ -3,26 +3,6 @@ import numpy as np
 import pandas as pd
 import joblib
 import sksurv
-class MultiPage: 
-    def __init__(self) -> None:
-        self.pages = []
-    
-    def add_page(self, title, func) -> None: 
-        self.pages.append(
-            {
-                "title": title, 
-                "function": func
-            }
-        )
-
-    def run(self):
-        # Drodown to select the page to run  
-        page = st.selectbox(#st.sidebar.selectbox(
-            'Module Navigation, ', #Select the module,
-            self.pages, 
-            format_func=lambda page: page['title']
-        )
-        page['function']()
         
 def overall_app():
     st.subheader('1. What is meningioma?')
